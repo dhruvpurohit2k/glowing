@@ -81,12 +81,11 @@ describe("Website DOM structure", () => {
   });
 
   // Accessibility Tests
-  test("Images have alt text", () => {
+  test("All Images have alt text", () => {
     const imgs = document.querySelectorAll("img");
     imgs.forEach((img) => {
       expect(img.hasAttribute("alt")).toBe(true);
     });
-    //expect(img.hasAttribute("alt")).toBe(true);
   });
   test("Buttons have aria-labels", () => {
     const button = document.querySelector(".action-btn");
